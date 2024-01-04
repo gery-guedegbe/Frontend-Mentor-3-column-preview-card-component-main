@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2? family= Lexend+Deca:wght@400;700;800 & display=swap'); /*font-family: 'Lexend Deca', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700;800&display=swap'); /**/
+
+:root{
+    /*Primary*/
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /*Neutral*/
+    --Transparent-white: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+    --Very-light-gray:  hsl(0, 0%, 95%); /*background, headings, buttons*/
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 1600px;
+    min-height: 100vh;
+    display: grid;
+    place-content: center; 
+}
+
+.container{
+    width: 900px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+}
+
+.container .card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px;
+}
+
+.container .card img{
+    width: 70px;
+}
+
+.container .card p, button{
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.container .card h1{
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 2.8em;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.card1{
+    background: var(--Bright-orange);
+}
+
+.card2{
+    background: var(--Dark-cyan);
+}
+
+.card3{
+    background: var(--Very-dark-cyan);
+}
+
+.container .card p{
+    color: var(--Transparent-white);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5em;
+    width: 98%;
+    height: 100%;
+}
+
+.container .card button{
+    padding: 15px;
+    width: 60%;
+    border: 3px solid #ffffff;
+    border-radius: 30px;
+    background: transparent;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.container .card1 button:hover{
+    color: var(--Bright-orange);
+    background: #ffffff;
+    transition: 0.5s ease;
+}
+
+.container .card2 button:hover{
+    color: var(--Dark-cyan);
+    background: #ffffff;
+    transition: 0.5s ease;
+}
+
+.container .card3 button:hover{
+    color: var(--Very-dark-cyan);
+    background: #ffffff;
+    transition: 0.5s ease;
+}
+
+.attribution {
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    padding: 20px;
+}
+
+.attribution a {
+    color: var(--Very-dark-cyan);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 745px) {
+    body{
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    .container{
+        width: 400px;
+        height: 100%;
+        display: block;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .attribution{
+        font-size: 0.8em;
+        margin-top: 20px;
+        position: relative;
+    }
+}
